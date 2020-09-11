@@ -23,6 +23,78 @@
             FEVEREIRO: 28 dias (29 em anos bissextos)
         */
 
+       let mes = parseFloat(prompt("Informe um número equivalente a um mês (1-12)"))
+       let dias, temErro = false
+
+    if(isNaN(mes)) {
+        alert("ERRO: Número inválido.")
+        temErro = true
+       }
+       else{
+        switch(mes){
+            case 1:
+                mes = "Janeiro"
+                dias = 31
+            break
+            case 2:
+                mes="Fevereiro"
+                dias = 28
+            break
+            case 3:
+                mes="Março"
+                dias=31
+            break
+            case 4:
+                mes="Abril"
+                dias=30
+            break
+            case 5:
+                mes="Maio"
+                dias=31
+            break
+            case 6:
+                mes="Junho"
+                dias=30
+            break
+            case 7:
+                mes="Julho"
+                dias=31
+            break
+            case 8:
+                mes="Agosto"
+                dias=30
+            break
+            case 9:
+                mes="Setembro"
+                dias=31
+            break
+            case 10:
+                mes="Outubro"
+                dias = 30
+            break
+            case 11:
+                mes="Novembro"
+                dias = 31
+            break
+            case 12:
+                mes="Dezembro"
+                dias = 30
+            break
+            default: // se não entrar em nenhum case
+                 alert('ERRO: Número inválido')
+                 temErro = true
+        }
+       }
+
+       if(!temErro){
+           if(mes != "Fevereiro"){
+            document.write(`O mês de ${mes} tem ${dias} dias.`)
+           }
+       else{
+           document.write(`O mês de ${mes} tem ${dias} dias (29 em anos bissextos).`)
+
+       }
+       }
     </script>
 </head>
 <body>
