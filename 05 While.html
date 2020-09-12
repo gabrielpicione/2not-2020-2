@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de documento HTML</title>
+    <script>
+        //'use strict' impete que variaveis sejam declaradas
+        //sem i uso de let, var ou const
+        //Inicializar variáreis diretamente é má pratica de
+        // programação
+        'use strict'
+
+        /*
+        Peça ao usuário para informar números, repetidamente. Esses números
+        vão sendo somados até que o usuário informe 0.
+
+        Então, o resultado da soma é exibido.
+
+        */
+
+       let soma = 0
+       let num =1
+
+        //Number tem o mesmo efeito do parseFloat
+      // let num = Number(prompt("Informe um número a ser somado (ou 0 para terminar):"))
+
+        //Estrutura de repetição
+        while (num !=0){
+    
+            num = Number(prompt("Informe um número a ser somado (ou 0 para terminar):"))
+        //O número só entra para a soma se for válido
+        if (!isNaN(num)){
+           // soma = soma + num
+           soma += num
+        }
+        }
+
+        document.write  (`A soma dos números informados é ${soma} `)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
